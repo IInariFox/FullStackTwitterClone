@@ -1,0 +1,32 @@
+
+.sign-up span {
+  color: #8899a6;
+}
+
+.sign-up {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+.homepage .dropdown-menu {
+  left: 0 !important;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+#sign-up-btn {
+  background-color: #ffac33;
+  background-image: linear-gradient(#ffcc4d,#ffac33);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffcc4d, endColorstr=#ffac33, GradientType=0)";
+  border-color: #f1a02a;
+  color: #292f33;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}

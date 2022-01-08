@@ -1,0 +1,29 @@
+
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.log-in {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.log-in .form-group {
+  padding: 0;
+}
+
+.log-in div:nth-child(2) {
+  margin-bottom: 5px;
+}
+
+.log-in label, .log-in a {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.log-in label, .sign-up span {
+  color: #8899a6;
+}
