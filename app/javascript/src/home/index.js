@@ -4,7 +4,7 @@ import Home from './home';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Home />,
+    <div>Hello</div>,
     document.body.appendChild(document.createElement('div')),
   )
 })
