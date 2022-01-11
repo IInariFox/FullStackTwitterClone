@@ -22,4 +22,3 @@ Rails.application.routes.draw do
   get 'login' => 'static_pages#login'
   get '*path' => 'static_pages#login'
 end
-
