@@ -120,7 +120,7 @@ const Login = (props) => {
                         <div className="sub-footer">
                             <a className="d-block text-white pt-5" href="">testing footer</a>
                             <a className="d-block text-white pt-2" href="">bottom footer</a>
-                            <p className=" text-white">2021<sup>&#169;</sup></p>
+                            <p className=" text-white">2022<sup>&#169;</sup></p>
                         </div>
                     </div>
 
