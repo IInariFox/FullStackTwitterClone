@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create!([
-  { username: 'Arthur', email: 'arthur@test.com', password: 'password1' },
-  { username: 'Charles', email: 'charles@test.com', password: 'password2' },
+  { username: 'UserFirst', email: 'first@test.com', password: 'password1' },
+  { username: 'UserLast', email: 'last@test.com', password: 'password2' },
 ])
 
 users.first.tweets.create!(
