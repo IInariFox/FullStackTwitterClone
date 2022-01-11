@@ -12,7 +12,7 @@ module Api
       @tweet = user.tweets.new(tweet_params)
 
       if @tweet.save
-        #TweetMailer.notify(@tweet).deliver!
+        TweetMailer.notify(@tweet).deliver!
         render 'api/tweets/create'
       end
     end
@@ -45,19 +45,6 @@ module Api
         render 'api/tweets/index'
       end
     end
-
-    def search
-
-      if params[:keyword].blank?
-        render 'api/tweets/index'
-      else
-        @parameter = params[:keyword].downcase
-        @tweets = Tweet.all.where("lower(message) LIKE :search", search: @parameter)
-        render 'api/tweets/index'
-      end
-
-    end
-
 
     private
 

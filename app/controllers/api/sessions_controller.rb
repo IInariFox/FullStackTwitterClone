@@ -1,7 +1,5 @@
 module Api
   class SessionsController < ApplicationController
-    skip_before_action :require_login, only: [:create]
-
     def create
       @user = User.find_by(username: params[:user][:username])
 
@@ -12,10 +10,11 @@ module Api
           httponly: true
         }
 
-        render 'api/sessions/create', status: :created
-
+        render 'api/sessions/create'
       else
-        render json: { success: false }, status: :bad_request
+        render json: {
+          success: false
+        }
       end
     end
 
@@ -25,9 +24,11 @@ module Api
 
       if session
         @user = session.user
-        render 'api/sessions/authenticated', status: :ok
+        render 'api/sessions/authenticated'
       else
-        render json: { authenticated: false }, status: :bad_request
+        render json: {
+          authenticated: false
+        }
       end
     end
 
@@ -36,7 +37,9 @@ module Api
       session = Session.find_by(token: token)
 
       if session and session.destroy
-        render json: { success: true }, status: :ok
+        render json: {
+          success: true
+        }
       end
     end
   end
