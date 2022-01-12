@@ -82,10 +82,6 @@ body.feeds.index {
   color: #0084B4;
 }
 
-/*a:hover {
-  color: #0084B4;
-}*/
-
 .trends {
   background: #fff;
   padding: 10px 0;
@@ -125,7 +121,6 @@ body.feeds.index {
 
 #upload-image-btn:hover {
   cursor: pointer;
-  /* Style as you please, it will become the visible UI component. */
 }
 
 #image-select {
@@ -139,7 +134,7 @@ body.feeds.index {
   max-width: 40px;
   &:hover {
     cursor: pointer;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
 }
