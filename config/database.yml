@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: fs_twitter_clone
+  database: db/production.sqlite3

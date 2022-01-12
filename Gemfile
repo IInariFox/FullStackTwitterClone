@@ -13,14 +13,14 @@ gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'webpacker', '~> 4.x'
+
 # Use jquery as the JavaScript library
-# gem 'jquery-rails', '>= 4.3.5'
+gem 'jquery-rails', '>= 4.3.5'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-# gem 'turbolinks', '~> 5.2.1'
+gem 'turbolinks', '~> 5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10'
 # Use Redis adapter to run Action Cable in production
@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.13'
 
 gem 'textacular', '~> 5.2'
 
-gem 'aws-sdk-s3', '~> 1.75'
+gem 'aws-sdk', '~> 3.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -51,6 +51,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.1.1'
   gem 'pry-rails', '>= 0.3.9'
   gem 'rspec-rails', '~> 4.0'
+  gem 'sqlite3', '~> 1.4.2'
 end
 
 group :development do
@@ -62,7 +63,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.1'
 
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4.2'
+  
 end
 
 group :production do

@@ -1,24 +1,21 @@
 Rails.application.routes.draw do
-  root 'static_pages#login'
+  root 'static_pages#home'
+  get '/feeds'                    => 'feeds#index'
 
-  namespace :api do
-    # USERS
-    post '/users'                  => 'users#create'
+  # USERS
+  post '/users'                  => 'api/users#create'
 
-    # SESSIONS
-    post '/sessions'               => 'sessions#create'
-    get  '/authenticated'          => 'sessions#authenticated'
-    delete '/sessions'             => 'sessions#destroy'
+  # SESSIONS
+  post '/sessions'               => 'api/sessions#create'
+  get  '/authenticated'          => 'api/sessions#authenticated'
+  delete '/sessions'             => 'api/sessions#destroy'
 
-    # TWEETS
-    post '/tweets'                 => 'tweets#create'
-    get  '/tweets'                 => 'tweets#index'
-    delete '/tweets/:id'           => 'tweets#destroy'
-    get  '/users/:username/tweets' => 'tweets#index_by_user'
-    get  '/tweets/search/:keyword' => 'tweets#search'
-  end
+  # TWEETS
+  post '/tweets'                 => 'api/tweets#create'
+  get  '/tweets'                 => 'api/tweets#index'
+  delete '/tweets/:id'           => 'api/tweets#destroy'
+  get  '/users/:username/tweets' => 'api/tweets#index_by_user'
 
-  get 'home' => 'static_pages#home'
-  get 'login' => 'static_pages#login'
-  get '*path' => 'static_pages#login'
+  # Redirect all other paths to index page, which will be taken over by AngularJS
+  # get '*path'    => 'static_pages#home'
 end
