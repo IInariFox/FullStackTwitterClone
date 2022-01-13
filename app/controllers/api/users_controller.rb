@@ -7,15 +7,15 @@ module Api
         render 'api/users/create'
       else
         render json: {
-          success: false
-        }
+          message: @user.errors.messages
+        }, status: 400
       end
     end
 
     private
 
-      def user_params
-        params.require(:user).permit(:email, :password, :username)
-      end
+    def user_params
+      params.require(:user).permit(:email, :password, :username)
+    end
   end
 end

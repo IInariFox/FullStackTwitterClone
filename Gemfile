@@ -3,34 +3,40 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+# jQuery
+gem 'jquery-rails'
+# bootstrap 4
+gem 'bootstrap', '~>4.5.0'
+# font awesome
+gem 'font-awesome-sass', '~>4.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3.7'
+gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
-gem 'puma', '~> 5.2'
+gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 6.0'
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 4.2.0'
+gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'webpacker', '~> 4.x'
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails', '>= 4.3.5'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 5.0'
+gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5.2.1'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.13'
+gem 'bcrypt', '~> 3.1.7'
 
-gem 'textacular', '~> 5.2'
+gem 'paperclip', '~> 6.1'
 
 gem 'aws-sdk', '~> 3.0'
+
+gem 'textacular'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -39,34 +45,43 @@ gem 'aws-sdk', '~> 3.0'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.6', require: false
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', '~> 11.1.1', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   # Added by Altcademy.com
-  gem 'awesome_print', '~> 1.8.0'
-  gem 'dotenv-rails', '~> 2.7.5'
-  gem 'factory_bot_rails', '~> 5.1.1'
-  gem 'pry-rails', '>= 0.3.9'
-  gem 'rspec-rails', '~> 4.0'
-  gem 'sqlite3', '~> 1.4.2'
+  gem 'awesome_print'
+  gem 'dotenv-rails'
+  gem 'factory_bot_rails', '~> 4.11'
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.8'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 4.0.1'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring', '~> 2.1.0'
-  gem 'spring-watcher-listen', '~> 2.0.1'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+end
 
-  # Use sqlite3 as the database for Active Record
-  
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'selenium-webdriver'
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper'
 end
 
 group :production do
   # Use pg as the database for Active Record
-  gem 'pg', '~> 1.2.3'
+  gem 'pg', '~> 1.1.3'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

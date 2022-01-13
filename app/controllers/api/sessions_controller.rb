@@ -1,5 +1,5 @@
-module Api 
- class SessionsController < ApplicationController
+module Api
+  class SessionsController < ApplicationController
     def create
       @user = User.find_by(username: params[:user][:username])
 
@@ -13,8 +13,9 @@ module Api
         render 'api/sessions/create'
       else
         render json: {
-          success: false
-        }
+          success: false,
+          message: "Crudential Error"
+        }, status: 400
       end
     end
 

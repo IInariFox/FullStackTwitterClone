@@ -3,11 +3,6 @@ json.tweets do
     json.id tweet.id
     json.username tweet.user.username
     json.message tweet.message
-
-    if tweet.image.attached?
-      json.image url_for(tweet.image)
-    else
-      json.image nil
-    end
+    json.image url_for(tweet.image) if tweet.image.attached?
   end
 end
