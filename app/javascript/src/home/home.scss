@@ -1,0 +1,116 @@
+body {
+  margin: 20px;
+}
+nav {
+  background-color: white;
+  height: 66px;
+}
+
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 80px;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  opacity: 1;
+  transition: 6s;
+  transition-duration: 3s;
+  transition-timing-function: linear;
+}
+
+#backgroundOne {
+  z-index: -1;
+}
+
+#backgroundTwo {
+  z-index: -2;
+}
+
+#backgroundThree {
+  z-index: -3;
+}
+
+
+.navbar-brand {
+  margin-left: 320px;
+}
+
+.language {
+  margin-right: 290px;
+  list-style: none;
+}
+
+.language>li>a {
+  text-decoration: none;
+  color: rgb(63, 63, 63);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  line-height: 21px;
+  text-align: left;
+}
+
+ul li a {
+  display: block;
+  padding: 8px 8px;
+  color: rgb(63, 63, 63);
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: rgb(0, 0, 0);
+  background: white;
+}
+
+ul li ul.dropdown-menu {
+  min-width: 100%;
+  background: white;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+}
+
+ul li:hover ul.dropdown-menu {
+  display: block;
+}
+
+p {
+  font-size: 20px;
+}
+.login, .signup {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.forgot-button {
+  margin-left: 12px;
+}
+
+#signup-button {
+  margin-left: 120px;
+}
+
+.homecard {
+  color: white;
+}
+.info {
+  margin-top: 200px;
+}
+a#me {
+  text-decoration: none;
+  color: white;
+}
+a#alt {
+  color: white;
+}

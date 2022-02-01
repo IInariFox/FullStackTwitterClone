@@ -1,6 +1,5 @@
-json.tweet do
-  json.username @tweet.user.username
-  json.message  @tweet.message
-  json.image    url_for(@tweet.image) if @tweet.image.attached?
-  json.id       @tweet.id
+json.tweets do |tweet|
+    json.id         @tweet.user_id
+    json.username    @tweet.user
+    json.message  @tweet.message
 end

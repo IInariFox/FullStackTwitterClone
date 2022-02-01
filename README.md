@@ -1,3 +1,4 @@
-# Twitter Clone (Advanced with Mailer, Search, Photo Upload)
+# Full Stack Twitter Clone App via Rails
 
-Visit [Altcademy Classroom](https://www.altcademy.com/classroom/) for more instructions.
+Create React front-end that consumes backend Rails API built from scratch
+

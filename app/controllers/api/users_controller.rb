@@ -1,21 +1,22 @@
 module Api
-  class UsersController < ApplicationController
-    def create
-      @user = User.new(user_params)
+    class UsersController < ApplicationController
+        def create
+            @user = User.create(user_params)
 
-      if @user.save
-        render 'api/users/create'
-      else
-        render json: {
-          message: @user.errors.messages
-        }, status: 400
-      end
+            if @user
+                render 'api/users/create.jbuilder'
+                
+            else
+                render json: {
+                    success: false
+                }
+            end
+        end
+
+        private
+
+            def user_params
+                params.require(:user).permit(:password, :username, :email)
+            end
     end
-
-    private
-
-    def user_params
-      params.require(:user).permit(:email, :password, :username)
-    end
-  end
 end

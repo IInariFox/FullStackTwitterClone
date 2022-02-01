@@ -1,0 +1,139 @@
+.main {
+  min-height: calc(100vh - 51px);
+  background-image: url(https://abs.twimg.com/images/themes/theme1/bg.png);
+  background-position: left 40px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #C0DEED;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+nav {
+    background-color: white;
+    height: 66px;
+}
+
+nav>form {
+    display: inline-flex;
+}
+
+nav>form>input, nav>form>button {
+    height: 34px;
+}
+
+.navbar-brand {
+    margin-left: 320px;
+}
+
+.form-inline {
+    margin-right: 290px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul li {
+    display: block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+  }
+  
+  ul li a {
+    display: block;
+    padding: 8px 8px;
+    color: rgb(63, 63, 63);
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    color: rgb(0, 0, 0);
+    background: white;
+  }
+  
+  ul li ul.dropdown-menu {
+    min-width: 100%;
+    background: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+  }
+  
+  ul li:hover ul.dropdown-menu {
+    display: block;
+  }
+
+.profileContent, .trends {
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.user-stats {
+    display: inline;
+}
+
+.user-stats>.col-3>a, .user-field>a, nav>form>ul>li>a, .trends-header>small>a, .trends-list>li>a, .tweet>a {
+    text-decoration: none;
+}
+
+.tweet>a {
+    color: black;
+}
+.tweet>a>small {
+    color: rgb(114, 114, 114);
+}
+
+.user-field>a, #user-icon {
+    color: rgb(43, 42, 42);
+}
+
+.user-stat {
+    font-size: 10px;
+    color: rgb(119, 144, 145);
+}
+
+.trends-list>li>a, .trends-header>small>a, .user-stats-tweets, .user-stats-following, .user-stats-followers {
+    color: rgb(107, 128, 168);
+}
+
+.trends-header {
+    color: rgb(84, 87, 87);
+}
+
+.pull-right {
+    margin-left: 420px;
+}
+
+.trends-list, nav>form>ul {
+    list-style: none;
+}
+
+#space {
+    margin-right: 6px;
+}
+
+.post-tweet-box {
+    margin-left: 60px;
+}
+
+#post-tweet {
+    background: #C0DEED;
+    border: 1px solid #BFE0EC;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 8px 8px 20px;
+}
+
+.tweet {
+    background-color: white;
+    margin-top: 1px;
+    padding: 6px 10px 10px 6px;
+}
+
+.button-float {
+    text-align: right;
+    margin-top: -40px;
+}
